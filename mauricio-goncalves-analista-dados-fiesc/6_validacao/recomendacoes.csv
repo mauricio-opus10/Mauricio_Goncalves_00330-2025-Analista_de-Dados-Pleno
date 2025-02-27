@@ -1,0 +1,10 @@
+categoria,descricao,acao,prioridade
+Codificação,Padronizar a codificação de caracteres em todos os arquivos,Converter todos os arquivos para UTF-8 e garantir tratamento correto de caracteres especiais.,Alta
+Dados de Microrregião,Revisar dados das 2 microrregiões com inconsistências,Comparar detalhadamente os valores das microrregiões com inconsistências e corrigir conforme a fonte oficial (TABNET).,Alta
+Correção Específica,Corrigir dados da microrregião Blumenau,Verificar a fonte da discrepância de 328.0 estabelecimentos (13.68%) e atualizar com o valor correto.,Alta
+Correção Específica,Corrigir dados da microrregião Joinville,Verificar a fonte da discrepância de 261.0 estabelecimentos (8.98%) e atualizar com o valor correto.,Alta
+Dados de Município,Revisar dados dos 1 municípios com inconsistências,Comparar detalhadamente os valores dos municípios com inconsistências e corrigir conforme a fonte oficial (TABNET).,Alta
+Correção Prioritária,Corrigir dados do município de Blumenau,Verificar a fonte da discrepância de 328.0 estabelecimentos (28.72%) e atualizar com o valor correto.,Alta
+Consistência Interna,Resolver inconsistências entre valores de microrregião e soma de municípios,Verificar a fonte das discrepâncias em que a soma dos municípios não corresponde ao valor declarado da microrregião. Reclassificar municípios ou ajustar valores conforme necessário.,Alta
+Mapeamento,Melhorar o mapeamento entre municípios e microrregiões,"Atualizar a tabela silver para incluir todos os municípios e suas respectivas microrregiões, garantindo consistência nos nomes.",Alta
+Pipeline de Dados,Implementar validação automática no pipeline ETL,"Criar scripts de validação que sejam executados automaticamente após cada carregamento de dados, alertando sobre possíveis inconsistências.",Média

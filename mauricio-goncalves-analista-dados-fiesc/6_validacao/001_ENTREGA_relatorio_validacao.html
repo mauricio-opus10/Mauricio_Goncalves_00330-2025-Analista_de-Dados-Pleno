@@ -1,0 +1,281 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Relatório de Validação - Estabelecimentos de Saúde em Santa Catarina</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+            h1, h2, h3 { color: #00557f; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            .alta { background-color: #ffcccc; }
+            .media { background-color: #ffffcc; }
+            .baixa { background-color: #e6ffe6; }
+            .summary { background-color: #f0f8ff; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+            .section { margin-top: 30px; }
+            .image-container { text-align: center; margin: 20px 0; }
+            .footer { margin-top: 50px; font-size: 0.8em; color: #666; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <h1>Relatório de Validação - Estabelecimentos de Saúde em Santa Catarina</h1>
+        <p>Data de geração: 27/02/2025 05:47:22</p>
+        
+        <div class="summary">
+            <h2>Resumo da Validação</h2>
+            <p><strong>Total de inconsistências encontradas:</strong> 15</p>
+            <p><strong>Severidade Alta:</strong> 11</p>
+            <p><strong>Severidade Média:</strong> 4</p>
+            <p><strong>Severidade Baixa:</strong> 0</p>
+            
+            <p><strong>Principais descobertas:</strong></p>
+            <ul>
+                <li>Problemas de codificação de caracteres em nomes de microrregiões e municípios</li>
+                <li>Inconsistências nos dados de Blumenau entre as bases Gold e TABNET</li>
+                <li>Várias microrregiões apresentam valores declarados maiores que a soma dos municípios</li>
+                <li>Alto número de municípios sem mapeamento correto para microrregiões devido a problemas de normalização</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Inconsistências Identificadas</h2>
+            <table>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Entidade</th>
+                    <th>Descrição</th>
+                    <th>Severidade</th>
+                    <th>Impacto</th>
+                </tr>
+    
+                <tr class="média">
+                    <td>Codificação</td>
+                    <td>gold_micro - microrregiao</td>
+                    <td>11 valores com possíveis problemas de codificação valores com possíveis problemas de codificação</td>
+                    <td>Média</td>
+                    <td>Causa problemas de correspondência entre bases</td>
+                </tr>
+        
+                <tr class="média">
+                    <td>Codificação</td>
+                    <td>gold_municipio - municipio</td>
+                    <td>109 valores com possíveis problemas de codificação valores com possíveis problemas de codificação</td>
+                    <td>Média</td>
+                    <td>Causa problemas de correspondência entre bases</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Microrregião</td>
+                    <td>Blumenau</td>
+                    <td>Diferença de 328.0 estabelecimentos (13.68%) entre Gold (2726.0) e TABNET (2398.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a confiabilidade dos dados por microrregião</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Microrregião</td>
+                    <td>Joinville</td>
+                    <td>Diferença de -261.0 estabelecimentos (-8.98%) entre Gold (2647.0) e TABNET (2908.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a confiabilidade dos dados por microrregião</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Município</td>
+                    <td>Blumenau</td>
+                    <td>Diferença de 328.0 estabelecimentos (28.72%) entre Gold (1470.0) e TABNET (1142.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a confiabilidade dos dados por município</td>
+                </tr>
+        
+                <tr class="média">
+                    <td>Consistência Interna</td>
+                    <td>blumenau</td>
+                    <td>Diferença de -207.0 estabelecimentos (-7.59%) entre a soma dos municípios (2519.0) e o valor declarado da microrregião (2726.0)</td>
+                    <td>Média</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="média">
+                    <td>Consistência Interna</td>
+                    <td>campos de lages</td>
+                    <td>Diferença de -140.0 estabelecimentos (-9.59%) entre a soma dos municípios (1320.0) e o valor declarado da microrregião (1460.0)</td>
+                    <td>Média</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Consistência Interna</td>
+                    <td>canoinhas</td>
+                    <td>Diferença de -258.0 estabelecimentos (-33.16%) entre a soma dos municípios (520.0) e o valor declarado da microrregião (778.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Consistência Interna</td>
+                    <td>curitibanos</td>
+                    <td>Diferença de -56.0 estabelecimentos (-12.28%) entre a soma dos municípios (400.0) e o valor declarado da microrregião (456.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Consistência Interna</td>
+                    <td>ituporanga</td>
+                    <td>Diferença de -40.0 estabelecimentos (-26.49%) entre a soma dos municípios (111.0) e o valor declarado da microrregião (151.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Consistência Interna</td>
+                    <td>joinville</td>
+                    <td>Diferença de -768.0 estabelecimentos (-29.01%) entre a soma dos municípios (1879.0) e o valor declarado da microrregião (2647.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Consistência Interna</td>
+                    <td>rio do sul</td>
+                    <td>Diferença de -140.0 estabelecimentos (-16.77%) entre a soma dos municípios (695.0) e o valor declarado da microrregião (835.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Consistência Interna</td>
+                    <td>tabuleiro</td>
+                    <td>Diferença de -28.0 estabelecimentos (-45.16%) entre a soma dos municípios (34.0) e o valor declarado da microrregião (62.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Consistência Interna</td>
+                    <td>tijucas</td>
+                    <td>Diferença de -59.0 estabelecimentos (-25.54%) entre a soma dos municípios (172.0) e o valor declarado da microrregião (231.0)</td>
+                    <td>Alta</td>
+                    <td>Afeta a integridade referencial entre microrregiões e municípios</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Mapeamento</td>
+                    <td>Municípios-Microrregiões</td>
+                    <td>106 municípios sem correspondência na tabela silver</td>
+                    <td>Alta</td>
+                    <td>Impede a validação completa de consistência interna</td>
+                </tr>
+        
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Recomendações</h2>
+            <table>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Descrição</th>
+                    <th>Ação Recomendada</th>
+                    <th>Prioridade</th>
+                </tr>
+    
+                <tr class="alta">
+                    <td>Codificação</td>
+                    <td>Padronizar a codificação de caracteres em todos os arquivos</td>
+                    <td>Converter todos os arquivos para UTF-8 e garantir tratamento correto de caracteres especiais.</td>
+                    <td>Alta</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Dados de Microrregião</td>
+                    <td>Revisar dados das 2 microrregiões com inconsistências</td>
+                    <td>Comparar detalhadamente os valores das microrregiões com inconsistências e corrigir conforme a fonte oficial (TABNET).</td>
+                    <td>Alta</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Correção Específica</td>
+                    <td>Corrigir dados da microrregião Blumenau</td>
+                    <td>Verificar a fonte da discrepância de 328.0 estabelecimentos (13.68%) e atualizar com o valor correto.</td>
+                    <td>Alta</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Correção Específica</td>
+                    <td>Corrigir dados da microrregião Joinville</td>
+                    <td>Verificar a fonte da discrepância de 261.0 estabelecimentos (8.98%) e atualizar com o valor correto.</td>
+                    <td>Alta</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Dados de Município</td>
+                    <td>Revisar dados dos 1 municípios com inconsistências</td>
+                    <td>Comparar detalhadamente os valores dos municípios com inconsistências e corrigir conforme a fonte oficial (TABNET).</td>
+                    <td>Alta</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Correção Prioritária</td>
+                    <td>Corrigir dados do município de Blumenau</td>
+                    <td>Verificar a fonte da discrepância de 328.0 estabelecimentos (28.72%) e atualizar com o valor correto.</td>
+                    <td>Alta</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Consistência Interna</td>
+                    <td>Resolver inconsistências entre valores de microrregião e soma de municípios</td>
+                    <td>Verificar a fonte das discrepâncias em que a soma dos municípios não corresponde ao valor declarado da microrregião. Reclassificar municípios ou ajustar valores conforme necessário.</td>
+                    <td>Alta</td>
+                </tr>
+        
+                <tr class="alta">
+                    <td>Mapeamento</td>
+                    <td>Melhorar o mapeamento entre municípios e microrregiões</td>
+                    <td>Atualizar a tabela silver para incluir todos os municípios e suas respectivas microrregiões, garantindo consistência nos nomes.</td>
+                    <td>Alta</td>
+                </tr>
+        
+                <tr class="média">
+                    <td>Pipeline de Dados</td>
+                    <td>Implementar validação automática no pipeline ETL</td>
+                    <td>Criar scripts de validação que sejam executados automaticamente após cada carregamento de dados, alertando sobre possíveis inconsistências.</td>
+                    <td>Média</td>
+                </tr>
+        
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Metodologia</h2>
+            <p>O processo de validação foi estruturado nas seguintes etapas:</p>
+            <ol>
+                <li><strong>Compreensão dos dados:</strong> Análise inicial da estrutura dos conjuntos de dados (bronze, silver e gold)</li>
+                <li><strong>Validação estrutural:</strong> Verificação de colunas, tipos de dados, valores nulos e problemas de codificação</li>
+                <li><strong>Validação cruzada:</strong> Comparação entre os dados processados (pasta gold) e os dados oficiais do TABNET</li>
+                <li><strong>Validação de consistência interna:</strong> Verificação da coerência entre os diferentes arquivos dentro da pasta gold</li>
+                <li><strong>Detecção e documentação de inconsistências:</strong> Registro sistemático de discrepâncias encontradas</li>
+                <li><strong>Propostas de correção:</strong> Recomendações para resolver os problemas identificados</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>Conclusão</h2>
+            <p>A validação dos dados de estabelecimentos de saúde em Santa Catarina identificou algumas inconsistências importantes que precisam ser corrigidas antes da disponibilização na plataforma Cidade Única. Os principais problemas estão relacionados a:</p>
+            <ul>
+                <li>Padronização dos nomes de microrregiões e municípios</li>
+                <li>Discrepâncias em determinadas regiões, especialmente Blumenau e Joinville</li>
+                <li>Consistência interna entre os valores de microrregião e a soma dos municípios</li>
+            </ul>
+            <p>A implementação das recomendações propostas neste relatório permitirá garantir a qualidade e confiabilidade dos dados na plataforma.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Relatório gerado automaticamente pelo processo de validação de dados do Observatório FIESC</p>
+        </div>
+    </body>
+    </html>
+    

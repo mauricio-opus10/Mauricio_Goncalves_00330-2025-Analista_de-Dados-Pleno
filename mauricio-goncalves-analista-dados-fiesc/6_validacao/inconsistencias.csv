@@ -1,0 +1,16 @@
+tipo,entidade,descricao,severidade,impacto
+Codificação,gold_micro - microrregiao,11 valores com possíveis problemas de codificação valores com possíveis problemas de codificação,Média,Causa problemas de correspondência entre bases
+Codificação,gold_municipio - municipio,109 valores com possíveis problemas de codificação valores com possíveis problemas de codificação,Média,Causa problemas de correspondência entre bases
+Microrregião,Blumenau,Diferença de 328.0 estabelecimentos (13.68%) entre Gold (2726.0) e TABNET (2398.0),Alta,Afeta a confiabilidade dos dados por microrregião
+Microrregião,Joinville,Diferença de -261.0 estabelecimentos (-8.98%) entre Gold (2647.0) e TABNET (2908.0),Alta,Afeta a confiabilidade dos dados por microrregião
+Município,Blumenau,Diferença de 328.0 estabelecimentos (28.72%) entre Gold (1470.0) e TABNET (1142.0),Alta,Afeta a confiabilidade dos dados por município
+Consistência Interna,blumenau,Diferença de -207.0 estabelecimentos (-7.59%) entre a soma dos municípios (2519.0) e o valor declarado da microrregião (2726.0),Média,Afeta a integridade referencial entre microrregiões e municípios
+Consistência Interna,campos de lages,Diferença de -140.0 estabelecimentos (-9.59%) entre a soma dos municípios (1320.0) e o valor declarado da microrregião (1460.0),Média,Afeta a integridade referencial entre microrregiões e municípios
+Consistência Interna,canoinhas,Diferença de -258.0 estabelecimentos (-33.16%) entre a soma dos municípios (520.0) e o valor declarado da microrregião (778.0),Alta,Afeta a integridade referencial entre microrregiões e municípios
+Consistência Interna,curitibanos,Diferença de -56.0 estabelecimentos (-12.28%) entre a soma dos municípios (400.0) e o valor declarado da microrregião (456.0),Alta,Afeta a integridade referencial entre microrregiões e municípios
+Consistência Interna,ituporanga,Diferença de -40.0 estabelecimentos (-26.49%) entre a soma dos municípios (111.0) e o valor declarado da microrregião (151.0),Alta,Afeta a integridade referencial entre microrregiões e municípios
+Consistência Interna,joinville,Diferença de -768.0 estabelecimentos (-29.01%) entre a soma dos municípios (1879.0) e o valor declarado da microrregião (2647.0),Alta,Afeta a integridade referencial entre microrregiões e municípios
+Consistência Interna,rio do sul,Diferença de -140.0 estabelecimentos (-16.77%) entre a soma dos municípios (695.0) e o valor declarado da microrregião (835.0),Alta,Afeta a integridade referencial entre microrregiões e municípios
+Consistência Interna,tabuleiro,Diferença de -28.0 estabelecimentos (-45.16%) entre a soma dos municípios (34.0) e o valor declarado da microrregião (62.0),Alta,Afeta a integridade referencial entre microrregiões e municípios
+Consistência Interna,tijucas,Diferença de -59.0 estabelecimentos (-25.54%) entre a soma dos municípios (172.0) e o valor declarado da microrregião (231.0),Alta,Afeta a integridade referencial entre microrregiões e municípios
+Mapeamento,Municípios-Microrregiões,106 municípios sem correspondência na tabela silver,Alta,Impede a validação completa de consistência interna

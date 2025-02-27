@@ -1,0 +1,34 @@
+CNES - Estabelecimentos por Tipo - Santa Catarina
+Quantidade por Microrregião IBGE
+Período:Mai/2024
+"Microrregião IBGE";"Quantidade"
+"42001 SAO MIGUEL DO OESTE";693
+"42002 CHAPECO";1886
+"42003 XANXERE";714
+"42004 JOACABA";1577
+"42005 CONCORDIA";610
+"42006 CANOINHAS";778
+"42007 SAO BENTO DO SUL";367
+"42008 JOINVILLE";2908
+"42009 CURITIBANOS";456
+"42010 CAMPOS DE LAGES";1460
+"42011 RIO DO SUL";835
+"42012 BLUMENAU";2398
+"42013 ITAJAI";2815
+"42014 ITUPORANGA";151
+"42015 TIJUCAS";231
+"42016 FLORIANOPOLIS";3568
+"42017 TABULEIRO";62
+"42018 TUBARAO";1331
+"42019 CRICIUMA";1420
+"42020 ARARANGUA";569
+"Total";24829
+ Fonte: Ministério da Saúde - Cadastro Nacional dos Estabelecimentos de Saúde do Brasil - CNES
+ Nota:
+ - Os dados relativos ao Cadastro Nacional de Estabelecimentos de Saúde (CNES) exibidos no TABNET referem-se aos registros constantes no Banco de Dados Nacional do CNES com status ATIVO.
+ - A partir do processamento de junho de 2012, houve mudança na classificação da natureza e esfera dos estabelecimentos. Com isso, temos que:
+ 
+ Até maio de 2012 estas informações estão disponíveis como "Natureza" e "Esfera Administrativa".
+ De junho de 2012 a outubro de 2015, estão disponíveis tanto como "Natureza" e "Esfera Administrativa", como "Natureza Jurídica" e "Esfera Jurídica".
+ A partir de novembro de 2015, estão disponíveis como "Natureza Jurídica" e "Esfera Jurídica".
+ 
